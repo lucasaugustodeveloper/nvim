@@ -8,8 +8,8 @@ Plug 'w0rp/ale'
 Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
-"colorscheme gruvbox
-"set background=dark
+colorscheme gruvbox
+set background=dark
 
 set hidden
 set number
