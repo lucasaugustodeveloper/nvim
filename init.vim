@@ -28,11 +28,27 @@ Plug 'ap/vim-css-color'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'iamcco/markdown-preview.nvim'
 Plug 'luochen1990/rainbow'
+Plug 'mxw/vim-jsx'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'slim-template/vim-slim'
+Plug 'digitaltoad/vim-jade'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'ekalinin/dockerfile.vim'
+Plug 'moll/vim-node'
+Plug 'wavded/vim-stylus'
+Plug 'stanangeloff/php.vim'
+Plug 'isruslan/vim-es6'
+Plug 'leshill/vim-json'
+Plug 'nono/jquery.vim'
+Plug 'burnettk/vim-angular'
+Plug 'arnaud-lb/vim-php-namespace'
+Plug 'evidens/vim-twig'
+Plug 'jparise/vim-graphql'
+Plug 'tpope/vim-liquid'
 call plug#end()
 
-colorscheme onedark
+colorscheme gruvbox
 set background=dark
-
 set termguicolors
 set hidden
 set number
@@ -43,6 +59,7 @@ set ts=2
 set sw=2
 set et
 set list lcs=tab:\|\ 
+filetype plugin indent on
 
 let mapleader="\<space>"
 nnoremap <leader>; A;<esc>
@@ -61,6 +78,8 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 let g:rainbow_active = 1
 let g:NERDTreeShowIgnoredStatus = 1
+let g:jsx_ext_required = 1
+let g:jsx_pragma_required = 1
 
 let g:lightline = {
   \  'colorscheme': 'onedark'
