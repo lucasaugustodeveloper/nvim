@@ -36,7 +36,7 @@ nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
 nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
 
 nnoremap <C-p> :Files<cr>
-nnoremap <C-n> :NERDTreeToggle<cr>
+nnoremap <C-b> :NERDTreeToggle<cr>
 
 let g:UltiSnipsEditSplit = 'vertical'
 let g:UltiSnipsSnippetsDir = '~/.config/nvim/Ultisnips'
