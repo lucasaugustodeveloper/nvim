@@ -5,6 +5,9 @@ Plug 'morhetz/gruvbox'
 Plug 'sickill/vim-monokai'
 Plug 'joshdick/onedark.vim'
 Plug 'fenetikm/falcon'
+Plug 'chriskempson/base16-vim'
+Plug 'tomasr/molokai'
+Plug 'dracula/vim'
 
 Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
@@ -16,11 +19,18 @@ Plug 'dbakker/vim-lint'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mhinz/vim-signify'
 Plug 'Shougo/deoplete.nvim'
-Plug 'chriskempson/base16-vim'
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'mattn/emmet-vim'
+Plug 'itchyny/lightline.vim'
+Plug 'yggdroot/indentline'
+Plug 'ap/vim-css-color'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'iamcco/markdown-preview.nvim'
+Plug 'luochen1990/rainbow'
 call plug#end()
 
-colorscheme base16-default-dark
+colorscheme onedark
 set background=dark
 
 set termguicolors
@@ -29,6 +39,10 @@ set number
 set relativenumber
 set inccommand=split
 set cursorline
+set ts=2
+set sw=2
+set et
+set list lcs=tab:\|\ 
 
 let mapleader="\<space>"
 nnoremap <leader>; A;<esc>
@@ -40,11 +54,52 @@ nnoremap <C-b> :NERDTreeToggle<cr>
 
 let g:UltiSnipsEditSplit = 'vertical'
 let g:UltiSnipsSnippetsDir = '~/.config/nvim/Ultisnips'
+let g:user_emmet_mode = 'a'
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+let g:rainbow_active = 1
+let g:NERDTreeShowIgnoredStatus = 1
 
 let g:lightline = {
   \  'colorscheme': 'onedark'
 \ }
-let g:airline_theme = 'onedark'
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+\]
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+\ }
+
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
+
+let g:indentLine_setColors = 0
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
