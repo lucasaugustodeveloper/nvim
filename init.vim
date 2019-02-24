@@ -9,6 +9,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'tomasr/molokai'
 Plug 'dracula/vim'
 
+Plug 'roxma/nvim-completion-manager'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
