@@ -66,6 +66,7 @@ let mapleader="\<space>"
 nnoremap <leader>; A;<esc>
 nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
 nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
+nnoremap <leader>ef :vsplit
 
 nnoremap <C-p> :Files<cr>
 nnoremap <C-f> :Ag<space>
