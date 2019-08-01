@@ -7,8 +7,9 @@ Plug 'joshdick/onedark.vim'
 Plug 'fenetikm/falcon'
 Plug 'chriskempson/base16-vim'
 Plug 'tomasr/molokai'
-Plug 'dracula/vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
+" Plugins
 Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -47,7 +48,7 @@ Plug 'jparise/vim-graphql'
 Plug 'tpope/vim-liquid'
 call plug#end()
 
-colorscheme gruvbox
+colorscheme dracula
 set background=dark
 set termguicolors
 set hidden
@@ -60,6 +61,7 @@ set sw=2
 set et
 set list lcs=tab:\|\ 
 filetype plugin indent on
+syntax on
 
 let mapleader="\<space>"
 nnoremap <leader>; A;<esc>
