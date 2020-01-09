@@ -44,7 +44,6 @@ Plug 'nono/jquery.vim'
 Plug 'burnettk/vim-angular'
 Plug 'arnaud-lb/vim-php-namespace'
 Plug 'evidens/vim-twig'
-Plug 'jparise/vim-graphql'
 Plug 'tpope/vim-liquid'
 call plug#end()
 
