@@ -1,12 +1,7 @@
 " Install Vim Plug if not installed
 call plug#begin()
 " Colorscheme
-Plug 'morhetz/gruvbox'
-Plug 'sickill/vim-monokai'
-Plug 'joshdick/onedark.vim'
-Plug 'fenetikm/falcon'
 Plug 'chriskempson/base16-vim'
-Plug 'tomasr/molokai'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Plugins
@@ -58,7 +53,7 @@ set cursorline
 set ts=2
 set sw=2
 set et
-set list lcs=tab:\|\ 
+set list lcs=tab:\|\
 filetype plugin indent on
 syntax on
 
@@ -71,7 +66,7 @@ nnoremap <leader>ef :vsplit
 nnoremap <C-p> :Files<cr>
 nnoremap <C-f> :Ag<space>
 nnoremap <C-b> :NERDTreeToggle<cr>
-nnoremap <leader>ef :vsplit 
+nnoremap <leader>ef :vsplit
 
 let g:UltiSnipsEditSplit = 'vertical'
 let g:UltiSnipsSnippetsDir = '~/.config/nvim/Ultisnips'
