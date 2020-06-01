@@ -25,6 +25,12 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'iamcco/markdown-preview.nvim'
 Plug 'luochen1990/rainbow'
 Plug 'mxw/vim-jsx'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'wakatime/vim-wakatime'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'tpope/vim-fugitive' 
 Plug 'hail2u/vim-css3-syntax'
 Plug 'slim-template/vim-slim'
 Plug 'digitaltoad/vim-jade'
