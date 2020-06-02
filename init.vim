@@ -2,6 +2,7 @@
 call plug#begin()
 " Colorscheme
 Plug 'chriskempson/base16-vim'
+Plug 'joshdick/onedark.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Plugins
@@ -48,7 +49,7 @@ Plug 'evidens/vim-twig'
 Plug 'tpope/vim-liquid'
 call plug#end()
 
-colorscheme dracula
+colorscheme onedark
 set background=dark
 set termguicolors
 set hidden
