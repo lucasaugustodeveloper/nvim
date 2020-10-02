@@ -7,6 +7,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Plugins
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
