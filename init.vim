@@ -56,7 +56,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 call plug#end()
 
-colorscheme onedark
+colorscheme dracula
 set background=dark
 set termguicolors
 set hidden
