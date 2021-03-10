@@ -50,6 +50,11 @@ Plug 'burnettk/vim-angular'
 Plug 'arnaud-lb/vim-php-namespace'
 Plug 'evidens/vim-twig'
 Plug 'tpope/vim-liquid'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'jparise/vim-graphql'
 call plug#end()
 
 colorscheme onedark
@@ -131,3 +136,5 @@ let g:indentLine_setColors = 0
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
