@@ -50,6 +50,7 @@ Plug 'burnettk/vim-angular'
 Plug 'arnaud-lb/vim-php-namespace'
 Plug 'evidens/vim-twig'
 Plug 'tpope/vim-liquid'
+Plug 'powerline/powerline'
 call plug#end()
 
 colorscheme onedark
