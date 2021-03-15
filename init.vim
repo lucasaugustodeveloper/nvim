@@ -33,7 +33,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'wakatime/vim-wakatime'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'tpope/vim-fugitive' 
 Plug 'hail2u/vim-css3-syntax'
 Plug 'slim-template/vim-slim'
@@ -51,9 +50,14 @@ Plug 'arnaud-lb/vim-php-namespace'
 Plug 'evidens/vim-twig'
 Plug 'tpope/vim-liquid'
 Plug 'powerline/powerline'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'jparise/vim-graphql'
 call plug#end()
 
-colorscheme onedark
+colorscheme dracula
 set background=dark
 set termguicolors
 set hidden
@@ -90,6 +94,9 @@ let g:rainbow_active = 1
 let g:NERDTreeGitStatusShowIgnored = 1
 let g:jsx_ext_required = 1
 let g:jsx_pragma_required = 1
+let g:coc_global_extensions = [
+  \ 'coc-tsserver'
+  \ ]
 
 let g:lightline = {
   \  'colorscheme': 'dracula'
@@ -132,3 +139,13 @@ let g:indentLine_setColors = 0
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
